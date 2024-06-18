@@ -1,4 +1,4 @@
-package org.example.model;
+package org.example.dao.model;
 
 /**
  * User.java

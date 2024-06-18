@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.example.model.User;
+import org.example.dao.model.User;
 
 /**
  * AbstractDAO.java This DAO class provides CRUD database operations for the
@@ -18,9 +18,9 @@ import org.example.model.User;
  *
  */
 public class UserDAO {
-    private String jdbcURL = "jdbc:mysql://localhost:3306/jdbc-test";
-    private String jdbcUsername = "root";
-    private String jdbcPassword = "password";
+    private static final String  jdbcURL = "jdbc:mysql://localhost:3306/jdbc-test";
+    private static final String jdbcUsername = "root";
+    private static final String jdbcPassword = "password";
 
     private static final String INSERT_USERS_SQL = "INSERT INTO users" + "  (name, email, country) VALUES "
             + " (?, ?, ?);";
@@ -102,7 +102,6 @@ public class UserDAO {
             System.out.println(preparedStatement);
             // Step 3: Execute the query or update query
             ResultSet rs = preparedStatement.executeQuery();
-
             // Step 4: Process the ResultSet object.
             while (rs.next()) {
                 int id = rs.getInt("id");

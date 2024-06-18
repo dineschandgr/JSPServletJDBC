@@ -1,7 +1,7 @@
 package org.example.service;
 
 import org.example.dao.UserDAO;
-import org.example.model.User;
+import org.example.dao.model.User;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -12,7 +12,7 @@ public class UserService {
     static UserDAO userDAO = new UserDAO();
 
     public  List<User> selectAllUsers() {
-        List<User> listUser = userDAO.selßectAllUsers();
+        List<User> listUser = userDAO.selectAllUsers();
         return listUser;
     }
 

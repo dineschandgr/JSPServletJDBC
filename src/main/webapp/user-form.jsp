@@ -17,7 +17,7 @@
 	</center>
     <div align="center">
 		<c:if test="${user != null}">
-			<form action="update" method="post">
+			<form action="update" method="put">
         </c:if>
         <c:if test="${user == null}">
 			<form action="insert" method="post">

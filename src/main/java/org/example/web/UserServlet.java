@@ -1,6 +1,6 @@
 package org.example.web;
 
-import org.example.model.User;
+import org.example.dao.model.User;
 import org.example.service.UserService;
 
 import javax.servlet.RequestDispatcher;
@@ -21,7 +21,7 @@ import java.util.List;
  * @email Ramesh Fadatare
  */
 
-@WebServlet("/user")
+@WebServlet("/")
 public class UserServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private UserService userService;
